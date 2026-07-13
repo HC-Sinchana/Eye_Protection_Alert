@@ -1,0 +1,57 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "eyeguard"
+version = "1.0.0"
+description = "Eye Protection Alert System - webcam-based screen distance monitor"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "EyeGuard Contributors" }]
+keywords = ["computer-vision", "opencv", "eye-strain", "health", "webcam", "face-detection"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Multimedia :: Video :: Capture",
+    "Topic :: Scientific/Engineering :: Image Recognition",
+]
+dependencies = [
+    "opencv-python>=4.8.0,<5",
+    "imutils>=0.5.4",
+    "numpy>=1.24.0",
+    "plyer>=2.1.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.4.0", "pytest-cov>=4.1.0", "ruff>=0.4.0", "black>=24.0.0"]
+
+[project.scripts]
+eyeguard = "eyeguard.app:main"
+eyeguard-calibrate = "eyeguard.calibrate:main"
+eyeguard-gui = "eyeguard.gui:main"
+
+[project.urls]
+Homepage = "https://github.com/your-username/eyeguard"
+Issues = "https://github.com/your-username/eyeguard/issues"
+
+[tool.setuptools.packages.find]
+include = ["eyeguard*"]
+
+[tool.ruff]
+line-length = 110
+target-version = "py39"
+
+[tool.black]
+line-length = 110
+target-version = ["py39"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

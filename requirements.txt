@@ -1,0 +1,4 @@
+opencv-python>=4.8.0,<5
+imutils>=0.5.4
+numpy>=1.24.0
+plyer>=2.1.0

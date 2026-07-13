@@ -1,0 +1,17 @@
+{
+  "safe_distance_cm": 40.0,
+  "real_face_width_cm": 14.0,
+  "focal_length_px": 500.0,
+  "grace_period_s": 3.0,
+  "check_interval_s": 0.5,
+  "alert_cooldown_s": 15.0,
+  "camera_index": 0,
+  "use_pi_camera": false,
+  "frame_width": 800,
+  "use_clahe": true,
+  "notification_title": "Eye Protection Alert",
+  "notification_message": "You're sitting too close to the screen. Please move back.",
+  "play_sound": true,
+  "log_level": "INFO",
+  "log_file": "eyeguard.log"
+}
